@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home | PengYuhan</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="./images/icon.png">
+
+  <meta name="description" content="PengYuhan的个人网站, 使用Bootstrap">
+  <meta name="keywords" content="PengYuhan, personal website, portfolio, blog">
+  <meta name="author" content="PengYuhan">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    .navbar {
+      border: 1px solid #e3e3e3;
+    }
+
+    .navbar-brand img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .refresh-btn {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">
+        <img src="./images/icon.png" alt="Logo"> 首页 | PengYuhan
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">首页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">关于我</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">博客</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">作品集</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">联系我</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8">
+        <img src="./images/icon.png" alt="PengYuhan" class="img-fluid rounded-circle mb-3">
+        <h1 class="display-4">PengYuhan</h1>
+        <p class="lead">一名初中牲, Minecraft玩家, 编程爱好者...</p>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-gender-male"></i>&nbsp; 性别: 男</li>
+          <li><i class="bi bi-calendar"></i>&nbsp; 生日: 2010年5月7日</li>
+          <li><i class="bi bi-geo-alt"></i>&nbsp; 定居地: 中国浙江宁波</li>
+          <li><i class="bi bi-github"></i>&nbsp; GitHub: <a href="https://github.com/PYHXiaoqing" target="_blank" class="text-decoration-none">@PYHXiaoqing</a></li>
+          <li><i class="bi bi-twitter"></i>&nbsp; X(Twitter): <a href="https://x.com/HansPeng422053" target="_blank" class="text-decoration-none">@HansPeng422053</a></li>
+          <li><i class="bi bi-envelope"></i>&nbsp; 邮箱: <a href="mailto:afb368633@163.com" class="text-decoration-none">afb368633@163.com<EMAIL></a></li>
+        </ul>
+        <a href="#" class="btn btn-success btn-sm">关于我</a>
+        <a href="#" class="btn btn-success btn-sm">博客</a>
+        <a href="#" class="btn btn-success btn-sm">作品集</a>
+        <a href="#" class="btn btn-success btn-sm">联系我</a>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3 mt-4">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-file-text"></i>&nbsp; 最新博客</h5>
+            <p class="card-text">无......</p>
+          </div>
+        </div>
+        <div class="card mb-3 mt-4">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-code-square"></i>&nbsp; 网站源代码</h5>
+            <p class="card-text">
+              在GitHub上的Repository地址, 有账号的话请给我一个Star<i class="bi bi-star-fill"></i>:
+              <a href="https://github.com/PYHXiaoqing/PYHXiaoqing.github.io" target="_blank" class="text-decoration-none">https://github.com/PYHXiaoqing/PYHXiaoqing.github.io</a>
+            </p>
+          </div>
+        </div>
+        <div class="card mb-3 mt-4">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-info-circle"></i>&nbsp; 你知道吗?</h5>
+            <p id="fact-text">加载中...</p>
+            <button class="refresh-btn btn-sm" onclick="refreshFact()"><i class="bi bi-arrow-clockwise"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    var do_you_know = [
+    "大象是世界上最大的陆地动物。",
+    "喜马拉雅山是地球上海拔最高的山脉。",
+    "蜜蜂可以感知地球的磁场。",
+    "Python 是一种流行的编程语言，名字来源于 Monty Python。",
+    "Minecraft 是一款沙盒游戏，由 Mojang Studios 开发。",
+    "在现实中, 落地水是一种危险的操作。",
+    "东京是世界上人口最多的城市。",
+    "地球上最长的河流是尼罗河。",
+    "巴西是世界上最大的咖啡生产国。",
+    "朱诺号探测器是第一个成功进入木星轨道的人造卫星。",
+    "太阳系中最大的行星是木星。",
+    "阿波罗11号任务是人类登月的第一个成功尝试。",
+    "尼安德特人是早期人类的一个分支。",
+    "印度是世界上最大的民主国家。",
+    "赤道上的阿根廷乌斯怀亚是世界上最南端的城市。",
+    "长颈鹿有七个颈椎，和人类一样多。",
+    "螳螂虾的触角可以加速到超过80公里每小时。",
+    "马达加斯加岛是世界上最大的岛国。",
+    "人类的大脑是身体里最能消耗能量的器官之一。",
+    "荷兰是世界上最大的鲜切花出口国。",
+    "宇航员在太空中经历微重力环境。",
+    "太阳是太阳系的中心恒星。",
+    "阿尔卑斯山是欧洲最高的山脉。",
+    "大熊猫是中国的国宝。",
+    "汉字是世界上历史最悠久的文字之一。",
+    "金字塔是古埃及的象征建筑。",
+    "马赛克是一种古老的艺术形式，用小块石头或玻璃组成。",
+    "世界上最大的动物是蓝鲸。",
+    "黑洞是宇宙中一种极其密集的天体。",
+    "哈雷彗星大约每76年经过一次地球附近。",
+    "太阳系中最小的行星是水星。",
+    "孟加拉虎是世界上最大的猫科动物之一。",
+    "马尔代夫是世界上最低的国家。",
+    "月球上有一辆被宇航员驾驶的车辆。",
+    "澳大利亚是唯一一个由一个国家和一个大陆组成的国家。",
+    "冰岛是世界上最北端的国家。",
+    "太平洋是地球上最大的洋。",
+    "阿尔卡特拉兹岛曾是美国最著名的监狱之一。",
+    "蜘蛛可以通过丝线感知它们周围的环境。",
+    "狐狸是灵巧的猫科动物。",
+    "人类的DNA几乎与黑猩猩的DNA相似。",
+    "宇宙中存在数以百亿计的星系。",
+    "北极熊是世界上最大的陆地食肉动物。",
+    "大熊座是北半球夜空中最容易辨认的星座之一。",
+    "赤道是地球上赤道线的位置。",
+    "亚马逊雨林是地球上最大的雨林。",
+    "埃菲尔铁塔是巴黎的标志性建筑之一。",
+    "恐龙在大约6500万年前灭绝。",
+    "亚马孙河是世界上流量最大的河流。",
+    "恒河是印度教信徒的重要河流。",
+    "秦始皇兵马俑是中国历史上的一项重要考古发现。",
+    "螳螂是昆虫界中一种凶猛的捕食者。",
+    "非洲是世界上最大的陆地面积第二大的大洲。",
+    "喜马拉雅山脉是世界上最年轻的山脉之一。",
+    "亚马逊河流经南美洲多个国家。",
+    "红海位于非洲和亚洲之间。",
+    "地中海是世界上最大的内陆海。",
+    "古罗马是欧洲历史上最强大的帝国之一。",
+    "乌龟可以长寿。",
+    "南极洲是地球上最寒冷的大陆。",
+    "太阳黑子是太阳表面上的磁活动区域。",
+    "马达加斯加岛上的狐猴是世界上最大的猴类之一。",
+    "草原是广阔的自然生态系统。",
+    "金字塔是古埃及法老的陵墓。",
+    "希腊是欧洲文明的摇篮之一。",
+    "北极是地球上最北端的地区。",
+    "纽约市是美国最大的城市之一。",
+    "珠穆朗玛峰是世界上海拔最高的山峰。",
+    "巴西是世界上最大的雨林国家。",
+    "美国是世界上最大的经济体之一。",
+    "亚马逊雨林拥有世界上最多样化的生物群落之一。",
+    "极光是地球极地地区的光学现象。",
+    "草原上生长着大量的草和低矮植物。",
+    "太平洋中的夏威夷群岛是美国的一个州。",
+    "巴黎是世界上最著名的旅游城市之一。",
+    "泰坦尼克号是一艘著名的沉没邮轮。",
+    "金门大桥是美国加州旧金山的标志性建筑。",
+    "阿拉斯加是美国最大的州。",
+    "金字塔是古埃及法老的陵墓。",
+    "世界上最大的动物是蓝鲸。",
+    "黑洞是宇宙中一种非常稠密的天体。",
+    "英国是欧洲历史上最强大的帝国之一。",
+    "月球上有一个被宇航员驾驶的车辆。",
+    "澳大利亚是唯一由一个国家和一个大陆组成的国家。",
+    "冰岛是世界上最北端的国家。",
+    "太平洋是地球上最大的洋。",
+    "蜘蛛通过丝线感知其周围的环境。",
+    "狐狸是灵巧的猫科动物。",
+    "人类的DNA与黑猩猩的DNA几乎相似。",
+    "宇宙中存在数十亿的星系。",
+    "北极熊是世界上最大的陆地食肉动物。",
+    '这里大概有100条"你知道吗?"。'
+  ];
+
+    function refreshFact() {
+      var randomFact = do_you_know[Math.floor(Math.random() * do_you_know.length)];
+      document.getElementById("fact-text").textContent = randomFact;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      refreshFact();
+    });
+  </script>
+</body>
+</html>
