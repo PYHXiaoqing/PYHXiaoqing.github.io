@@ -1,0 +1,11 @@
+.navbar {
+    border: 1px solid #e3e3e3;
+  }
+
+  .navbar-brand img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About Me | PengYuhan</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="./images/icon.png">
+
+  <meta name="description" content="关于PengYuhan">
+  <meta name="keywords" content="PengYuhan, personal website, portfolio, blog">
+  <meta name="author" content="PengYuhan">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    .about-me-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">
+        <img src="./images/icon.png" alt="Logo"> 关于我 | PengYuhan
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link"href="./index.html">首页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./about-me.html">关于我</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">博客</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">作品集</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">联系我</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主体内容 -->
+  <div class="container mt-5">
+    <img src="./images/icon.png" alt="PengYuhan" class="about-me-img">
+    <h1 class="text-center">关于我</h1>
+    <h5 class="text-center">我是什么? 人类、初中生、Minecraft玩家、编程爱好者...</h5>
+    <hr>
+    <!-- 基本信息表格 -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h4 class="card-title text-center">基本信息</h4>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th scope="row"><i class="bi bi-person"></i> 姓名</th>
+              <td>PengYuhan</td>
+            </tr>
+            <tr>
+              <th scope="row"><i class="bi bi-gender-male"></i> 性别</th>
+              <td>男</td>
+            </tr>
+            <tr>
+              <th scope="row"><i class="bi bi-calendar"></i> 出生日期</th>
+              <td>2010年5月7日</td>
+            </tr>
+            <tr>
+              <th scope="row"><i class="bi bi-geo-alt"></i> 居住地</th>
+              <td>浙江, 宁波</td>
+            </tr>
+            <tr>
+              <th scope="row"><i class="bi bi-bag"></i> 职业</th>
+              <td>初中生</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <h4 class="card-title text-center">最喜欢 & 最讨厌</h4>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <th scope="row"><i class="bi bi-heart-fill"></i> 最喜欢的事: </th>
+                    <td>当然是打游戏...</td>
+                </tr>
+                <tr>
+                    <th scope="row"><i class="bi bi-heartbreak"></i> 最讨厌的事: </th>
+                    <td>写语文作业</td>
+                </tr>
+                <tr>
+                    <th scope="row"><i class="bi bi-heart-fill"></i> 最喜欢的游戏: </th>
+                    <td>Minecraft</td>
+                </tr>
+                <tr>
+                    <th scope="row"><i class="bi bi-heartbreak"></i> 最讨厌的游戏: </th>
+                    <td id="gameName">迷你世界</td>
+                </tr>
+                <tr>
+                    <th scope="row"><i class="bi bi-heart-fill"></i> 最喜欢的音乐: </th>
+                    <td>Billie Jean -- Michael Jackson</td>
+                </tr>
+                <tr>
+                    <th scope="row"><i class="bi bi-heartbreak"></i> 最讨厌的音乐: </th>
+                    <td>......</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const gameNameElement = document.getElementById('gameName');
+
+    gameNameElement.addEventListener('mouseover', function() {
+        gameNameElement.textContent = '炸图模拟器';
+    });
+
+    gameNameElement.addEventListener('mouseout', function() {
+        gameNameElement.textContent = '迷你世界';
+    });
+</script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
